@@ -126,7 +126,7 @@ body {
 
     width: 100%;
     height: 100vh;
-    min-height: 560px;
+    min-height: 720px;
 
     text-align: center;
 
@@ -193,8 +193,8 @@ h2 {
     margin: 16px 0 8px 0;
 
     font-weight: 600;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 42px;
+    line-height: 42px;
 }
 
 h3 {
@@ -431,7 +431,7 @@ section {
 
     transition: 0.3s ease;
 
-    border-radius: 10px;
+    border-radius: 20px;
     background-position: center center;
     background-size: cover;
 }
@@ -718,6 +718,10 @@ input[type='file'] {
     }
     .navigation {
         margin: 10px auto;
+    }
+    .slide {
+        padding-top: 80px;     
+        min-height: 560px;   
     }
 }
 
