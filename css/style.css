@@ -126,7 +126,7 @@ body {
 
     width: 100%;
     height: 100vh;
-    min-height: 560px;
+    min-height: 720px;
 
     text-align: center;
 
@@ -193,8 +193,8 @@ h2 {
     margin: 16px 0 8px 0;
 
     font-weight: 600;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 42px;
+    line-height: 42px;
 }
 
 h3 {
@@ -327,6 +327,51 @@ p {
     box-shadow: none;
 }
 
+.button.disabled {
+    background: #EBEFF3;
+    color: #777;
+}
+
+.button.disabled:hover {
+    box-shadow: none;
+}
+
+#form-message {
+    /* margin: 0 0 8px 0; */
+    color: #d54444;
+    transition: 0.3s;
+}
+
+#form-message.hide {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    /* display: none; */
+}
+
+#submit-success {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+#submit-success.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.success {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
 .scroll-down {
     position: absolute;
     bottom: 20px;
@@ -431,7 +476,7 @@ section {
 
     transition: 0.3s ease;
 
-    border-radius: 10px;
+    border-radius: 20px;
     background-position: center center;
     background-size: cover;
 }
@@ -575,6 +620,7 @@ label {
 }
 
 .input {
+    position: relative;
     width: 100%;
     display: inline-block;
     height: 36px;
@@ -718,6 +764,10 @@ input[type='file'] {
     }
     .navigation {
         margin: 10px auto;
+    }
+    .slide {
+        padding-top: 80px;     
+        min-height: 560px;   
     }
 }
 

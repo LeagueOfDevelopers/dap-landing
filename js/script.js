@@ -49,14 +49,83 @@ $.fn.isOnScreen = function(){
 
 };
 
+function formSubmit() {
+    // console.log( $( "#form" ).serialize() );
+}
+function isEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+}
 $(document).ready(function () {
+    // $("#submit").сlick( function( event ) {
+    //     // event.preventDefault();
+    //     console.log( $( "#form" ).serialize() );
+    //     console.log("Click");
+    //   });
+
+    $('.submit').addClass('disabled');
+	
+    var elements = $('.validation').length;
+    var valid = 0;
+	
+	$('.validation').on('input', function() {
+        // console.log(this.name);
+        var isValid = false;
+        switch (this.name) {
+            case 'SenderEmail':
+                isValid = isEmail(this.value);
+                // console.log(isValid);
+                break;
+            case 'SenderName':
+                isValid = this.value.length > 0;
+                break;
+            default:
+                isValid = true;
+                break;
+        }
+        if (isValid) {
+            $(this).addClass('valid');
+        } else {
+            $(this).removeClass('valid');            
+        }
+        if($('.valid').length == elements) {
+            $('.submit').removeClass('disabled');
+            $('#form-message').addClass('hide');
+        } else {
+            $('.submit').addClass('disabled');
+        }
+    });
+
+    $('#form-submit').click(function () {
+        if ($('.valid').length != elements) {
+            // console.log("clicl");
+            $('#form-message').removeClass('hide');
+        } else {
+            // console.log($('#form').serialize());
+            $('#form-submit').text("Подождите...");
+            $.ajax({
+                type: "POST",
+                url: "https://devandprod.ru/mail",
+                data: $(this).serialize()
+              }).done(function() {
+                $("#submit-success").addClass('show');
+                // console.log('success');
+              }).fail(function() {
+                $("#submit-success").addClass('show');
+                $("#success-info").addClass('remove');
+                $("#error-info").removeClass('remove');
+                // console.log('fail');
+              });
+        }
+    });
+
     if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         $('.js-tilt').tilt({
             perspective: 1500,
         });
     }
     $('#select-portfolio').click(function () {
-        console.log('toggle');
+        // console.log('toggle');
         $('#select-portfolio').toggleClass('active');
         $('#portfolio-self').toggleClass('remove');
         $('#portfolio-commerce').toggleClass('remove');
@@ -70,9 +139,9 @@ $(document).ready(function () {
     });
     var isTouched = false;
     $(window).scroll(function(){
-        if (!isTouched && $('#message').isOnScreen()) {
+        if (!isTouched && $('#Content').isOnScreen()) {
             isTouched = true;
-            $("#name").focus();
+            $("#SenderName").focus();
         } else {
         }
     });
