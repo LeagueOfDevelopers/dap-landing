@@ -327,6 +327,51 @@ p {
     box-shadow: none;
 }
 
+.button.disabled {
+    background: #EBEFF3;
+    color: #777;
+}
+
+.button.disabled:hover {
+    box-shadow: none;
+}
+
+#form-message {
+    /* margin: 0 0 8px 0; */
+    color: #d54444;
+    transition: 0.3s;
+}
+
+#form-message.hide {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    /* display: none; */
+}
+
+#submit-success {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+#submit-success.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.success {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
 .scroll-down {
     position: absolute;
     bottom: 20px;
@@ -575,6 +620,7 @@ label {
 }
 
 .input {
+    position: relative;
     width: 100%;
     display: inline-block;
     height: 36px;
