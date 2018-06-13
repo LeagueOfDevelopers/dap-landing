@@ -260,7 +260,7 @@
                 <div class="form-back"> </div>
                 <h3 class="">Форма нового заказа</h3>
                 <div class="space-2"></div>
-                <form name="form" onsubmit="formSubmit(); return false;" id="form">
+                <form name="form" id="form">
                     <!-- <input id="Topic" type="text" value="Новая заявка" hidden> -->
                     <label for="SenderName">Ваше имя: *</label>
                     <input id="SenderName" name="SenderName" type="text" class="input validation" placeholder="Как к Вам обращаться?">
@@ -277,8 +277,8 @@
                     <label for="Content">Сообщение:</label>
                     <textarea id="Content" name="Content" type="textarea" class="input area" rows="5" placeholder="Опишите вашу идею"></textarea>
                     <p id="form-message" class="hide">Введите все обязательные поля (*)</p>
-                    <button id="form-submit" class="button submit">Отправить</button>
-                    <!-- <input type="submit" id="form-submit" class="button submit">Отправить</button> -->
+                    <!-- <button id="form-submit" class="button submit">Отправить</button> -->
+                    <input type="submit" id="form-submit" class="button submit" value="Отправить">
                 </form>
                 <div class="space-2"></div>
                 <div id="submit-success" class="form-back all-center">
