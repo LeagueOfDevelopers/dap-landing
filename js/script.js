@@ -126,6 +126,7 @@ $(document).ready(function () {
                 processData: false,
               }).done(function(data) {
                 $("#submit-success").addClass('show');
+                yaCounter49127821.reachGoal('FORM_SUBMIT');
                 // console.log(data);
               }).fail(function(data) {
                 $("#submit-success").addClass('show');
