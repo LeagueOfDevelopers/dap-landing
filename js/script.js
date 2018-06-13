@@ -17,7 +17,7 @@
 			else if( e.target.value )
 				fileName = e.target.value.split( '\\' ).pop();
 
-            console.log(fileName);
+            // console.log(fileName);
 			if( fileName )
 				$label.find( 'span' ).html( fileName );
 			else
@@ -57,6 +57,7 @@ function isEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
 }
+
 $(document).ready(function () {
     // $("#submit").сlick( function( event ) {
     //     // event.preventDefault();
@@ -64,7 +65,7 @@ $(document).ready(function () {
     //     console.log("Click");
     //   });
 
-    $('.submit').addClass('disabled');
+    $('#form-submit').addClass('disabled');
 	
     var elements = $('.validation').length;
     var valid = 0;
@@ -90,7 +91,7 @@ $(document).ready(function () {
             $(this).removeClass('valid');            
         }
         if($('.valid').length == elements) {
-            $('.submit').removeClass('disabled');
+            $('#form-submit').removeClass('disabled');
             $('#form-message').addClass('hide');
         } else {
             $('#form-submit').addClass('disabled');
@@ -111,11 +112,11 @@ $(document).ready(function () {
 
             var form = $('form')[0]; // You need to use standard javascript object here
             var formData = new FormData(form);
-            var formData = new FormData();
-            formData.append('section', 'general');
-            formData.append('action', 'previewImg');
-            Attach file
-            formData.append('Attachment', $("#Attachment").prop('files')[0]);
+            // var formData = new FormData();
+            // formData.append('section', 'general');
+            // formData.append('action', 'previewImg');
+            // Attach file
+            // formData.append('Attachment', $("#Attachment").prop('files')[0]);
             formData.append('image', $('input[type=file]')[0].files[0]); 
             $.ajax({
                 url: "https://devandprod.ru/mail",
