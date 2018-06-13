@@ -17,6 +17,7 @@
 			else if( e.target.value )
 				fileName = e.target.value.split( '\\' ).pop();
 
+            console.log(fileName);
 			if( fileName )
 				$label.find( 'span' ).html( fileName );
 			else
@@ -92,29 +93,45 @@ $(document).ready(function () {
             $('.submit').removeClass('disabled');
             $('#form-message').addClass('hide');
         } else {
-            $('.submit').addClass('disabled');
+            $('#form-submit').addClass('disabled');
         }
     });
 
-    $('#form-submit').click(function () {
+    $('#form-submit').click(function (e) {
+        e.preventDefault(); 
+        // console.log("clicl");
         if ($('.valid').length != elements) {
-            // console.log("clicl");
             $('#form-message').removeClass('hide');
         } else {
-            // console.log($('#form').serialize());
-            $('#form-submit').text("Подождите...");
+            $('#form-submit').prop('disabled', true);
+            $('#form-submit').val("Подождите...");
+            // var formData = new FormData(this);
+            // var formData = new FormData(this);
+            // console.log(formData);
+
+            var form = $('form')[0]; // You need to use standard javascript object here
+            var formData = new FormData(form);
+            var formData = new FormData();
+            formData.append('section', 'general');
+            formData.append('action', 'previewImg');
+            Attach file
+            formData.append('Attachment', $("#Attachment").prop('files')[0]);
+            formData.append('image', $('input[type=file]')[0].files[0]); 
             $.ajax({
-                type: "POST",
                 url: "https://devandprod.ru/mail",
-                data: $(this).serialize()
-              }).done(function() {
+                data: formData,//$(this).serialize(),
+                type: 'POST',
+                contentType: false,
+                processData: false,
+              }).done(function(data) {
                 $("#submit-success").addClass('show');
-                // console.log('success');
-              }).fail(function() {
+                // console.log(data);
+              }).fail(function(data) {
                 $("#submit-success").addClass('show');
                 $("#success-info").addClass('remove');
                 $("#error-info").removeClass('remove');
                 // console.log('fail');
+                // console.log(data);
               });
         }
     });
