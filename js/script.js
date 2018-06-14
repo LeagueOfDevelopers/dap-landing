@@ -64,12 +64,6 @@ $(document).ready(function () {
     //     console.log( $( "#form" ).serialize() );
     //     console.log("Click");
     //   });
-    var query = window.location.search.substring(1)
-    if(query.length) {
-        if(window.history != undefined && window.history.pushState != undefined) {
-            window.history.pushState({}, document.title, window.location.pathname);
-        }
-    }
 
     $('#form-submit').addClass('disabled');
 	
