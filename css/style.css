@@ -140,7 +140,7 @@ body {
     background: url(../media/landing_bg.png) center center;
     background-attachment: fixed;
     background-size: cover;
-    padding-bottom: 0;
+    padding: 0;
 }
 
 a {
@@ -315,6 +315,16 @@ p {
     font-size: 20px;
 }
 
+.button.big {
+    height: 46px;
+    padding: 0 30px;
+    transition: 0.3s;
+}
+
+.button.big:hover {
+    box-shadow: #e93a2a96 0 4px 112px;
+}
+
 .button:hover {
     background-image: linear-gradient(-208deg, #E62B2B 0%, #FD9C1D 100%);
     box-shadow: #0002 0 2px 12px;
@@ -439,7 +449,7 @@ section.gray {
 }
 
 section {
-    padding: 24px 0;
+    padding: 36px 0;
 
     text-align: center;
 }
