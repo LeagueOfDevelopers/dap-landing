@@ -233,8 +233,9 @@ h5 {
 p {
     font-weight: 400;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 24px;
     margin-top: 8px;
+    margin-bottom: 24px;
 }
 
 .text-left {
@@ -452,6 +453,11 @@ section {
     padding: 76px 0;
 
     text-align: center;
+}
+
+#portfolio {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .simply-text {
@@ -750,6 +756,10 @@ input[type='file'] {
         width: 100%;
         right: 0;
     }
+
+    .navigation > li {
+        min-width: auto;
+    }
     .logo-s {
         margin: 80px auto;
     }
@@ -765,8 +775,21 @@ input[type='file'] {
         background: #000;
     }
 
+    #portfolio {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .project-item {
         border-radius: 10px;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+    }
+
+    .select-wrapper {
+        padding: 5px;
     }
 }
 
