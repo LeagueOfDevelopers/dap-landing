@@ -137,9 +137,8 @@ body {
 
 .dark-bg {
     color: #FFF;
-    background: url(../media/landing_bg.png) center center;
+    background: url(../media/pattern.jpg) center center;
     background-attachment: fixed;
-    background-size: cover;
     padding-bottom: 0;
 }
 
