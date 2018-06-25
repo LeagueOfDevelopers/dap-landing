@@ -64,14 +64,14 @@ $(document).ready(function () {
     //     console.log( $( "#form" ).serialize() );
     //     console.log("Click");
     //   });
-    setTimeout(() => {
-        var query = window.location.search.substring(1)
-        if(query.length) {
-            if(window.history != undefined && window.history.pushState != undefined) {
-                window.history.pushState({}, document.title, window.location.pathname);
-            }
-        }
-    }, 2000);
+    // setTimeout(() => {
+    //     var query = window.location.search.substring(1)
+    //     if(query.length) {
+    //         if(window.history != undefined && window.history.pushState != undefined) {
+    //             window.history.pushState({}, document.title, window.location.pathname);
+    //         }
+    //     }
+    // }, 2000);
 
     $('#form-submit').addClass('disabled');
 	
@@ -165,11 +165,15 @@ $(document).ready(function () {
         }, 800);
     });
     var isTouched = false;
+    var isScrolled = false;
     $(window).scroll(function(){
         if (!isTouched && $('#Content').isOnScreen()) {
             isTouched = true;
             $("#SenderName").focus();
-        } else {
+        }
+        if (!isScrolled && $('#how').isOnScreen()) {
+            isScrolled = true;
+            yaCounter49127821.reachGoal('HERO_SCROLLED');
         }
     });
 });
