@@ -703,6 +703,17 @@ input[type='file'] {
     max-width: calc(100% - 150px);
 }
 
+header h1 {
+    max-width: 490px;
+    margin:  0 auto;    
+}
+
+header h4 {
+    max-width: 490px;
+    margin:  0 auto;    
+    margin-top: 12px;
+}
+
 /*small*/
 @media screen and (max-width: 639px) {
     .small-no-padding {
@@ -771,8 +782,8 @@ input[type='file'] {
         margin: 80px auto;
     }
     .slide {
-        padding-top: 80px;     
-        min-height: 620px;   
+        padding-top: 150px;
+        min-height: 660px;
     }
     .form-wrapper {
         padding: 30px 40px;
@@ -830,7 +841,7 @@ input[type='file'] {
         margin: 10px auto;
     }
     .slide {
-        padding-top: 50px;
+        padding-top: 80px;
         min-height: 500px;
     }
 }
