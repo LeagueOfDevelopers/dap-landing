@@ -11,6 +11,7 @@ body {
 
     font-weight: normal;
     font-family: 'Futura', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -118,28 +119,25 @@ body {
     width: 100%;
 }
 
+.relative {
+    position: relative;
+}
+
 .slide {
     position: relative;
-
-    display: flex;
     overflow: hidden;
 
     width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    padding-top: 100px;
-
-    text-align: center;
+    padding: 200px 0;
 
     align-items: center;
     justify-content: center;
 }
 
-.dark-bg {
+.grad-bg {
     color: #FFF;
-    background: url(../media/pattern.jpg) center center;
+    background-image: linear-gradient(-96deg, #49DE9C 0%, #027F7E 100%);
     background-attachment: fixed;
-    padding-bottom: 0;
 }
 
 a {
@@ -150,24 +148,24 @@ a {
 
 
 .logo-s {
-    display: block;
-
-    width: 200px;
-    margin: 30px auto;
+    display: inline-block;
+    height: 64px;
+    margin: 10px 0;
 }
 
-.logo-s-footer {
-    display: block;
-
-    width: 200px;
-    margin: 20px auto;
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
 }
 
 .navigation {
     display: flex;
 
-    max-width: 500px;
-    margin: 30px auto;
+    width: 400px;
+    margin: 20px 0;
     padding: 0;
 
     color: #FFF;
@@ -178,8 +176,6 @@ a {
 
 .navigation > li {
     margin: 0 10px;
-    min-width: 100px;
-
     list-style-type: none;
 
     color: #FFF;
@@ -190,6 +186,7 @@ a {
 .navigation > li:hover {
     text-decoration: underline;
 }
+
 
 h1 {
     font-weight: 600;
@@ -278,15 +275,11 @@ p {
 }
 
 .block {
-    display: inline-block;
+    /* display: inline-block; */
 
     padding: 0 20px;
 
     vertical-align: top;
-}
-.logo-footer {
-    position: relative;
-    left: -30px;
 }
 
 .button {
@@ -298,7 +291,7 @@ p {
 
     width: auto;
     min-height: 36px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 20px;
     border: none;
     font-family: 'Futura', Helvetica, Arial, sans-serif;
@@ -307,9 +300,9 @@ p {
     transition: 0.3s ease;
     outline: none;
 
-    color: #FFF;
+    color: #000;
     border-radius: 4px;
-    background-image: linear-gradient(-208deg, #D54444 0%, #F4AE53 100%);
+    background-color: #FFF;
 
     font-weight: 600;
     font-size: 20px;
@@ -326,8 +319,30 @@ p {
 }
 
 .button:hover {
-    background-image: linear-gradient(-208deg, #E62B2B 0%, #FD9C1D 100%);
+    background-color: #d74a45;
+    color: #FFF;
     box-shadow: #0002 0 2px 12px;
+}
+
+.button.primary {
+    color: #FFF;
+    background-image: linear-gradient(-208deg, #D54444 0%, #F4AE53 100%);
+}
+.button.primary:hover {
+    color: #FFF;
+    background-image: linear-gradient(-208deg, #E62B2B 0%, #FD9C1D 100%);
+}
+
+.button.border {
+    box-sizing: border-box;
+    color: #FFF;
+    background: transparent;
+    border: 2px solid #FFF;
+}
+.button.border:hover {
+    color: #000;
+    background: #FFF;
+    border: 2px solid #FFF;
 }
 
 .button.right {
@@ -336,6 +351,7 @@ p {
     top:-2px;
     bottom:0;
     border-radius: 0 4px 4px 0;
+    color: #FFF;
     background-image: linear-gradient(-225deg, #1A97F1 0%, #00DEC2 100%);
     position: absolute;
     font-weight: 400;
@@ -352,6 +368,8 @@ p {
 }
 
 .button.disabled:hover {
+    background: #EBEFF3;
+    color: #777;
     box-shadow: none;
 }
 
@@ -394,6 +412,7 @@ p {
 .scroll-down {
     position: absolute;
     bottom: 20px;
+    left: 50%;
 }
 
 .scroll-down a {
@@ -448,74 +467,17 @@ section.gray {
     background-color: #F9F9F9;
 }
 
-section {
-    padding: 76px 0;
-
-    text-align: center;
+section.secondary {
+    background-color: #E6F8F8;
 }
 
-#portfolio {
-    padding-left: 20px;
-    padding-right: 20px;
+section {
+    padding: 76px 0;
 }
 
 .simply-text {
     max-width: 650px;
     margin: 0 auto;
-}
-
-.tetris-block {
-    width: 60%;
-    margin: 0 auto;
-
-    transition: 0.3s;
-}
-.tetris-block:hover {
-    transform: scale(1.03);
-}
-
-.preference-icon {
-    width: 64px;
-    margin: 0 auto;
-
-    transition: 0.3s;
-}
-.preference-icon:hover {
-    transform: scale(1.03);
-}
-
-.project-wrapper {
-    position: relative;
-
-    padding: 16.666666% 0;
-
-    transform: translateZ(-20px);
-
-    transform-style: preserve-3d;
-}
-
-.project-item {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    bottom: 10px;
-    left: 10px;
-
-    overflow: hidden;
-
-    transition: 0.3s ease;
-
-    border-radius: 20px;
-    background-position: center center;
-    background-size: cover;
-}
-
-.project-item.level-1 {
-    transform: translateZ(30px);
-}
-
-.project-item.level-0 {
-    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.10);
 }
 
 .select {
@@ -704,14 +666,32 @@ input[type='file'] {
 }
 
 header h1 {
-    max-width: 490px;
-    margin:  0 auto;    
+    max-width: 440px;
 }
 
 header h4 {
-    max-width: 490px;
-    margin:  0 auto;    
+    max-width: 440px;
     margin-top: 12px;
+}
+
+.info-logo {
+    width: 180px;
+    float: right;
+    margin: 0 0 0 20px;
+}
+
+.hero-logo {
+    position: absolute;
+    position: absolute;
+    height: 560px;
+    left: -40px;
+    top: calc(50% - 280px);
+}
+
+.hero-mock {
+    position: absolute;
+    right: 20px;
+    height: 420px;
 }
 
 /*small*/
@@ -755,35 +735,23 @@ header h4 {
         font-size: 12vw;
     }
 
-    .project-wrapper {
-        position: relative;
-
-        padding: 25% 0;
-    }
-
-    .tetris-block {
-        width: 40%;
-    }
     .small-text-center {
         text-align: center;
     }
     .navigation {
-        position: absolute;
-        max-width: none;
-        top: 0;
-        width: 100%;
-        right: 0;
+        width: auto;
+        justify-content: space-between;
+        margin: 0;
     }
-
     .navigation > li {
-        min-width: auto;
-    }
-    .logo-s {
-        margin: 80px auto;
+        margin: 0;
     }
     .slide {
-        padding-top: 150px;
-        min-height: 660px;
+        padding: 0;
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        min-height: 600px;
     }
     .form-wrapper {
         padding: 30px 40px;
@@ -791,19 +759,6 @@ header h4 {
 
     .dark-bg {
         background: #000;
-    }
-
-    #portfolio {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .project-item {
-        border-radius: 10px;
-        top: 5px;
-        right: 5px;
-        bottom: 5px;
-        left: 5px;
     }
 
     .select-wrapper {
@@ -833,16 +788,17 @@ header h4 {
     section {
       padding: 24px 0;
     }
-    .logo-s {
-        width: 160px;
-        margin: 10px auto;
-    }
     .navigation {
-        margin: 10px auto;
+        width: auto;
+        margin: 10px;
     }
     .slide {
-        padding-top: 80px;
-        min-height: 500px;
+        padding: 140px 0;
+    }
+
+    .hero-logo {
+        right: -40px;
+        left: auto;
     }
 }
 
