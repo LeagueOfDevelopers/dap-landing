@@ -171,9 +171,11 @@ $(document).ready(function () {
             isTouched = true;
             $("#SenderName").focus();
         }
-        if (!isScrolled && $('#how').isOnScreen()) {
-            isScrolled = true;
-            yaCounter49127821.reachGoal('HERO_SCROLLED');
+        if($('#how').length){
+            if (!isScrolled && $('#how').isOnScreen()) {
+                isScrolled = true;
+                yaCounter49127821.reachGoal('HERO_SCROLLED');
+            }
         }
     });
 

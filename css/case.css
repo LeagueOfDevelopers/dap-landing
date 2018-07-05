@@ -201,6 +201,11 @@ h2 {
     line-height: 1;
 }
 
+h2 a {
+    text-decoration: underline;
+    font-weight: 400;
+}
+
 h3 {
     margin: 16px 0 8px 0;
 
@@ -770,11 +775,15 @@ header h4 {
 .bg-decor {
     position: absolute;
     width: 100%;
-    min-width: 3240px;
+    min-width: 3640px;
     height: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#desktop .bg-decor {
+    top: 38%;
 }
 
 #mobile {
@@ -801,13 +810,13 @@ header h4 {
     z-index: 100;
     position: relative;
 }
-.phone-wrapper {
+.iphone-wrapper {
     position: relative;
     float: right;
     width: 370px;
     max-width: 100%;
 }
-.phone {
+.iphone {
     position: relative;
     width: 100%;
     padding: 100% 0;
@@ -815,26 +824,63 @@ header h4 {
     transform: rotate(12deg);
     /* transition: 0.3s ease; */
 }
-.phone .screen {
+.screen {
     position: absolute;
+    background-color: #FFF;
+}
+.iphone .screen {
     top: 12.2%;
     left: 6.8%;
     right: 6.8%;
     bottom: 12.2%;
 }
-.phone iframe {
+.iphone iframe, .imac iframe{
     position: absolute;
     overflow: hidden;
     width: 100%;
     height: 100%;
 }
-.phone img {
+.iphone img, .imac img {
     pointer-events: none;
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
+}
+.imac-wrapper {
+    position: relative;
+    float: right;
+    width: 100%;
+}
+.imac {
+    position: relative;
+    width: 100%;
+    padding: 41% 0;
+    height: 0;
+}
+.imac .screen {    
+    top: 4.5%;
+    left: 3.8%;
+    right: 3.8%;
+    bottom: 32.3%;
+}
+
+.imac iframe {
+    width: 133.4%;
+    height: 133.4%;
+    transform: scale(0.75);
+    transform-origin: 0 0;
+}
+
+.mobile-logo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#result h2 {
+    margin: 16px 0 16px 0;
 }
 
 /*small*/
@@ -912,18 +958,18 @@ header h4 {
         height: auto;
         margin-bottom: 20px;
     }
-    .phone-wrapper {
+    .iphone-wrapper {
         margin: 0 auto;
         float: none;
     }
 
-    .phone {
+    .iphone {
       transform: rotate(0deg);
       margin: 20px 0;
       float: none;
     }
 
-    .phone iframe {
+    .iphone iframe {
         width: 133.4%;
         height: 133.4%;
         transform: scale(0.75);
