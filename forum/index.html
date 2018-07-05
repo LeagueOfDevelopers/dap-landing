@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang=ru>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev & Prod - разработка приложений и сайтов</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" href="../css/foundation.min.css">
+    <link rel="stylesheet" href="../css/case.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#e85672">
+    <meta name="msapplication-TileColor" content="#e85672">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:image:width" content="1239">
+    <meta property="og:image:height" content="649">
+    <meta property="og:url" content="devandprod.ru">
+    <meta property="og:image" content="http://devandprod.ru/media/og-image.jpg">
+    <meta property="og:description" content="Мы воплощаем в код ваши идеи для бизнеса.
+
+    Разрабатываем мобильные приложения, корпоративные сайты, интернет-магазины, порталы и сервисы. Мы автоматизируем бизнес-процессы и выпускаем продукты под нужды наших клиентов.">
+    <meta property="og:title" content="Разработка и продакшн">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter49127821 = new Ya.Metrika2({
+                        id:49127821,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks2");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/49127821" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+    <header class="row expanded">
+        <div class="slide grad-bg">
+            <div class="small-12 row block relative">
+                <svg class="hero-logo" viewBox="0 0 251 243" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M102.364 28.55V0H142v243h-39.636v-27.09a48.091 48.091 0 0 1-2.486-.096C14.63 210.372 0 174.968 0 117.783 0 60.766 24.905 32.697 102.364 28.55zm0 150.253c-47.053-6.24-52.265-27.799-52.265-58.572 0-30.287 7.957-49.517 52.265-54.718v113.29zm97.278-76.89C196.18 81.928 184.745 70.549 153 66.247V29.065c74.037 4.945 98 33.017 98 88.965 0 56.778-14.413 92.08-98 97.902v-37.457c32.66-4.99 43.36-17.196 46.623-36.893H165.9v-39.67h33.742z" fill="#000" fill-rule="evenodd" fill-opacity=".1" id="bg-logo"/>
+                </svg>
+                <img class="hero-mock medium-rm small-rm" src="../media/Mockup/Forum.png" alt="Forum">
+                <div class="relative">
+                    <h1>Упаковка мероприятия</h1>
+                    <h4>Как сделать информативную и красивую визитку для конференции</h4>
+                    <div class="space-2"></div>
+                    <a href="#about" class="button border">Подробнее</a>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <a href="#about">
+                    <span></span>
+                </a>
+            </div>
+            <div class="top-absolute">
+                    <div class="small-12 row block">
+                        <div class="header-wrapper">
+                            <a href="../"><img src="../media/LogoTextW.png" alt="DAP" class="logo-s"></a>
+                            <ul class="navigation small-rm">
+                                <li><a href="../#about">О нас</a></li>
+                                <li><a href="../#portfolio">Портфолио</a></li>
+                                <li><a href="../#contact">Контакты</a></li>
+                            </ul>
+                            <a href="#contact" class="button header small-rm">Заказать услуги</a>
+                            <a href="#contact" class="button header medium-rm large-rm">Заказать</a>
+                        </div>
+                        <ul class="navigation medium-rm large-rm">
+                            <li><a href="../#about">О нас</a></li>
+                            <li><a href="../#portfolio">Портфолио</a></li>
+                            <li><a href="../#contact">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </header>
+    <section id="about" class="secondary">
+        <div class="small-12 row block">
+            <h4>
+                <img class="info-logo" src="../media/PortfolioLogos/Forum.png" alt="Forum">
+                В октябре 2016 года планировалось проведение первого Форума эндаумент-фондов. Нашей задачей стала разработка сайта-визитки мероприятия. Заказчик рассчитывал на ранний запуск, чтобы привлечь аудиторию и включать адрес сайта в информационные рассылки и полиграфическую продукцию.
+            </h4>
+        </div>
+    </section>
+    <section id="design" class="slider-wrapper">
+        <div class="small-12 row block">
+            <h2 class="text-center">Дизайн</h2>
+            <h4>
+                Главным вызовом в разработке этого сайта было создание дизайна. Среди заявленных спикеров конференции были заместитель председателя правительства Аркадий Дворкович, министр образования Дмитрий Ливанов и ректор НИТУ "МИСиС" Алевтина Черникова, что задавало планку для дизайна сайта и предполагало "статусность".
+            </h4>
+            <div class="slider">
+                <div>
+                    <img src="../media/forum/forum-1.jpg" alt="Forum">
+                </div>
+                <div>
+                    <img src="../media/forum/forum-2.jpg" alt="Forum">
+                </div>
+                <div>
+                    <img src="../media/forum/forum-3.jpg" alt="Forum">
+                </div>
+            </div>
+            <h4>
+                От дизайна требовалось быть переиспользуемым - именно нам доверили сформировать визуальный стиль Форума, которому впоследствии соответствовали бы атрибутика и печатные материалы.
+            </h4>
+        </div>
+    </section>
+    <section id="schedule" class="no-pd">
+        <div class="small-12 row block">
+            <div class="small-12 columns">
+                <h2 class="text-center">Расписание</h2>
+            </div>
+            <div class="space-4"></div>
+            <div class="small-12 columns no-pd infoblock-wrapper">
+                <div class="small-12 medium-7 columns"></div>
+                <div class="small-12 medium-12 large-5 columns no-pd">
+                    <div class="img-mask grad-bg infoblock js-tilt">
+                        <p class="no-mg">
+                            Важнейшим элементом сайта конференции являлось расписание - оно должно быть легко читаемым для тех, кто хочет выяснить общую повестку мероприятия, достаточно подробным, чтобы по нему можно было ориентироваться, а так же хорошо выглядеть как на больших мониторах, так и на экранах телефонов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="small-12 medium-12 large-9 columns end no-pd">
+                <div class="img-mask js-tilt"><img src="../media/forum/forum-2.jpg" alt="Forum"></div>
+            </div>
+        </div>
+    </section>
+    <section id="mobile">
+        <svg class="bg-decor" height="auto" viewBox="0 0 3240 731" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <linearGradient x1="21.507%" y1="100%" x2="71.025%" y2="4.337%" id="b">
+                <stop stop-color="#027F7E" offset="0%"/>
+                <stop stop-color="#49DE9C" offset="100%"/>
+                </linearGradient>
+                <path d="M900 382.987c955.15 133.416 774.257-463.155 1440-298.8 557.465 137.624 226.584 523.341 900 523.341-659.344 180.693-524.619-183.342-900-258.64-412.657-82.776-380.022 510.85-1440 355.133C346.587 622.72 381.086 8.38 0 8.38c386.914-69.268 449.962 311.745 900 374.606z" id="a"/>
+            </defs>
+            <use fill="url(#b)" xlink:href="#a" fill-rule="evenodd"/>
+        </svg>
+        <div class="small-12 row block">
+            <div class="small-12 medium-6 columns no-pd">
+                <h2>Мобильная версия</h2>
+                <h4>
+                        Сделали удобную адаптивнцю версию сайта чтобы на ней хорошо отображалось расписание, так как это одна из главных частей сайта. При этом не забыли и про другие разделы 
+                </h4>
+            </div>
+            <svg class="mobile-logo small-rm medium-rm" width="300" height="300" viewbox="0 0 251 243" xmlns="http://www.w3.org/2000/svg">
+                <path d="M102.364 28.55V0H142v243h-39.636v-27.09a48.09 48.09 0 0 1-2.486-.096C14.63 210.372 0 174.968 0 117.783 0 60.766 24.905 32.697 102.364 28.55zm0 150.253c-47.053-6.24-52.265-27.799-52.265-58.572 0-30.287 7.957-49.517 52.265-54.718v113.29zm97.278-76.89C196.18 81.928 184.745 70.549 153 66.247V29.065c74.037 4.945 98 33.017 98 88.965 0 56.778-14.413 92.08-98 97.902v-37.457c32.66-4.99 43.36-17.196 46.623-36.893H165.9v-39.67h33.742z" fill="#000" fill-rule="evenodd" fill-opacity=".1"/>
+            </svg>
+            <div class="small-12 medium-6 columns no-pd">
+            <div class="iphone-wrapper">
+                <div class="iphone">
+                    <div class="screen">
+                        <iframe src="./index.html" frameborder="0"></iframe>
+                    </div>
+                    <img src="../media/iPhone-frame.png" alt="iPhone">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="realisation" class="no-pd">
+        <div class="small-12 row block">
+            <h4>
+                Заказчик предупредил о возможных частых изменениях в программе мероприятия, составе спикеров и даже контактной информации, поэтому главным вызовом при вёрстке была декомпозиция разметки страницы и её данных. Для удобства внесения правок в указанные блоки мы решили не использовать замедляющие работу сайта базы данных, а хранить данные в JSON-файле, динамически подгружавшемся сайтом при загрузке страницы. При этом данные, влияющие на индексацию сайта в поисковых системах, остались в разметке.
+                <br/>
+                <br/>
+                В серверной части сайта был реализован функционал отправки писем о регистрации на Форум. Информация о регистрации приходила на почтовый ящик заказчика, предварительно проходя валидацию для отсеивания некорректно сформированных писем: без имени и контактных данных.
+            </h4>
+        </div>
+    </section>
+    <section id="desktop" class="small-rm no-pd">
+        <svg class="bg-decor" height="auto" viewBox="0 0 3240 466" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <linearGradient x1="20.546%" y1="100%" x2="74.785%" y2="5.732%" id="b1">
+                <stop stop-color="#027F7E" offset="0%"/>
+                <stop stop-color="#49DE9C" offset="100%"/>
+              </linearGradient>
+              <path d="M900 166.608c465.36 154.13 933.038-186.976 1440 118.962 396.946 260.685 728.237 155.885 900-23.119-215.172 283.804-632.88 300.938-900 143.75-351.417-193.098-883.815 297.714-1440 140.054-534.268-192.17-682.768-140.053-900 0C141.803 262.451 464.33-6.357 900 166.608z" id="a1"/>
+            </defs>
+            <use fill="url(#b1)" xlink:href="#a1" transform="translate(0 -112)" fill-rule="evenodd"/>
+        </svg>
+        <div class="small-12 row block">
+            <div class="space-3"></div>
+            <div class="imac-wrapper">
+                    <div class="imac">
+                        <div class="screen">
+                            <iframe src="./index.html" frameborder="0"></iframe>
+                        </div>
+                        <img src="../media/iMac-frame.png" alt="iMac">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="conclusion" class="">
+        <div class="small-12 row block">
+            <h4>
+                Форум не был проведён из-за организационных проблем, однако сайт был разработан и введён в эксплуатацию за один месяц, полностью удовлетворив исходные требования. 
+            </h4>
+        </div>
+    </section>
+    <section id="result" class="secondary">
+        <div class="small-12 row block">
+            <h2 class="text-center">
+                Готовый сайт: <a href="http://forum.devandprod.ru">forum.devandprod.ru</a>
+            </h2>
+        </div>
+    </section>
+
+    <section  id="contact" class="grad-bg no-pd">
+        <div class="small-12 row">
+            <div class="columns small-12 space-4 small-rm"></div>
+            <div class="columns w-05 small-rm medium-rm space-1"></div>
+
+            <div class="columns medium-6 large-5 text-left small-text-center">
+                <div class="space-3"></div>
+                <div class="space-1"></div>
+                <h2 class="no-mg" style="font-size: 36px">Заполните форму</h2>
+                <h5>чтобы мы могли с вами связаться</h5>
+                <div class="space-1"></div>
+                <p class="translucent">Если хотите заказать работу или у вас есть вопросы, предложения, идеи, оставьте свои контактные данные. В течение рабочего дня мы свяжемся с вами и обсудим условия нашего дальнейшего сотрудничества.</p>
+                <div class="space-2 medium-rm large-rm"></div>
+                <div class="small-rm">
+                    <div class="contact columns small-12 no-pd">
+                        <p class="translucent">Адрес</p>
+                        <a target="_blank" href="https://www.google.ru/maps/place/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80.,+6%D1%812,+588,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119049/@55.7245425,37.6013112,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54b0c56f00001:0x512654e400cac648!8m2!3d55.7245425!4d37.6034999">
+                            <p class="bold">119049, Ленинский проспект, 6с3, офис 588</p>
+                        </a>
+                    </div>
+                    <div class="contact columns small-12 medium-6 no-pd">
+                        <p class="translucent">Телефон</p>
+                        <a href="tel:+79955001149"><p class="bold">+7 (995) 500-11-49</p></a>
+                    </div>
+                    <div class="contact columns small-12 medium-6 no-pd">
+                        <p class="translucent">Почта</p>
+                        <a href="mailto:mail@devandprod.ru"><p class="bold">mail@devandprod.ru</p></a>
+                    </div>
+                    <div class="contact columns small-12 medium-6 no-pd">
+                        <p class="translucent">Facebook</p>
+                        <a href="https://www.facebook.com/devandprod" target="_blank"><p class="bold">devandprod</p></a>
+                    </div>
+                    <div class="contact columns small-12 medium-6 no-pd">
+                        <p class="translucent">Блог</p>
+                        <a href="http://blog.devandprod.ru" target="_blank"><p class="bold">blog.devandprod.ru</p></a>
+                    </div>
+                    <div class="columns small-12 medium-10 end">
+                        <img src="../media/dap_static.png" alt="DAP" class="logo-s-footer">
+                        <!-- <p class="translucent text-center">© Dev &amp Prod 2018</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="columns small-rm medium-rm large-1 space-1"></div>
+            <div class="columns medium-6 large-5 form-wrapper">
+                <div class="form-back"> </div>
+                <h3 class="">Форма для связи</h3>
+                <div class="space-2"></div>
+                <form name="form" id="form">
+                    <!-- <input id="Topic" type="text" value="Новая заявка" hidden> -->
+                    <label for="SenderName">Ваше имя: *</label>
+                    <input id="SenderName" name="SenderName" type="text" class="input validation" placeholder="Как к Вам обращаться?">
+                    <label for="SenderEmail">Электронная почта: *</label>
+                    <input id="SenderEmail" name="SenderEmail" type="email" class="input validation" placeholder="mail@devandprod.ru">
+                    <label for="SenderPhoneNumber">Номер телефона:</label>
+                    <input id="SenderPhoneNumber" name="SenderPhoneNumber" type="phone" class="input" placeholder="+7 995 500 11 49">
+                    <label for="Attachment">Файл:</label>
+                    <input id="Attachment" name="Attachment" type="file" class="input inputfile">
+                    <label for="Attachment" class="input" style="padding: 2px 10px;">
+                        <span class="file-label">Файл не выбран</span>
+                        <div class="button right">Выбрать файл</div>
+                    </label>
+                    <label for="Content">Сообщение:</label>
+                    <textarea id="Content" name="Content" type="textarea" class="input area" rows="5" placeholder="Опишите вашу идею"></textarea>
+                    <p id="form-message" class="hide">Введите все обязательные поля (*)</p>
+                    <!-- <button id="form-submit" class="button submit">Отправить</button> -->
+                    <input type="submit" id="form-submit" class="button submit primary" value="Отправить">
+                </form>
+                <div class="space-2"></div>
+                <div id="submit-success" class="form-back all-center">
+                    <div id="success-info" style="margin-top: -40px">
+                        <img class="success" src="./media/success.png" alt="Успешно">
+                        <div class="space-2"></div>
+                        <h3 class="">Спасибо за заявку</h3>
+                        <h4 class="">Мы свяжемся с вами в ближайшее время</h4>
+                    </div>
+                    <div id="error-info" class="remove" style="margin-top: -40px">
+                        <img class="success" src="./media/error.png" alt="Ошибка">
+                        <div class="space-2"></div>
+                        <h3 class="">Произошла ошибка</h3>
+                        <h4 class="">Попробуйте связаться через наши контакты</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="medium-rm large-rm">
+                <div class="contact columns small-12">
+                <div class="space-2"></div>
+                    <p class="translucent">Адрес</p>
+                    <a target="_blank" href="https://www.google.ru/maps/place/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80.,+6%D1%812,+588,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119049/@55.7245425,37.6013112,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54b0c56f00001:0x512654e400cac648!8m2!3d55.7245425!4d37.6034999">
+                        <p class="bold">119049, Ленинский проспект, 6с3, офис 588</p>
+                    </a>
+                </div>
+                <div class="contact columns small-12 medium-6">
+                    <p class="translucent">Телефон</p>
+                    <a href="tel:+79955001149"><p class="bold">+7 (995) 500-11-49</p></a>
+                </div>
+                <div class="contact columns small-12 medium-6">
+                    <p class="translucent">Почта</p>
+                    <a href="mailto:mail@devandprod.ru"><p class="bold">mail@devandprod.ru</p></a>
+                </div>
+                <div class="contact columns small-12 medium-6">
+                    <p class="translucent">Facebook</p>
+                    <a href="https://www.facebook.com/devandprod" target="_blank"><p class="bold">devandprod</p></a>
+                </div>
+                <div class="contact columns small-12 medium-6">
+                    <p class="translucent">Блог</p>
+                    <a href="http://blog.devandprod.ru" target="_blank"><p class="bold">blog.devandprod.ru</p></a>
+                </div>
+                <div class="columns small-12 medium-10 end">
+                    <img src="./media/dap_static.png" alt="DAP" class="logo-s-footer">
+                    <p class="translucent text-center">© Dev &amp Prod 2018</p>
+                </div>
+            </div>
+        </div>
+        <div class="space-4"></div>
+    </footer>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/tilt.js"></script>
+<script src="../js/slick.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
