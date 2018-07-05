@@ -176,4 +176,10 @@ $(document).ready(function () {
             yaCounter49127821.reachGoal('HERO_SCROLLED');
         }
     });
+
+    $('.slider').slick({
+        centerMode: true,
+        centerPadding: '0',
+        slidesToShow: 1,
+    });
 });
