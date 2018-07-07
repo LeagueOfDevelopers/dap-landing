@@ -954,6 +954,12 @@ header h4 {
         padding: 5px;
     }
 
+
+    .info-logo {
+        float: left;
+        margin: 0 20px 0 0;
+    }
+
     .infoblock-wrapper {
         height: auto;
         margin-bottom: 20px;
@@ -975,6 +981,10 @@ header h4 {
         transform: scale(0.75);
         transform-origin: 0 0;
     }
+    #result h2 {
+        font-size: 10vw;
+    }
+    
 }
 
 /*medium*/
