@@ -237,6 +237,28 @@ p {
     margin-bottom: 24px;
 }
 
+#about {
+    background-image: linear-gradient(-32deg, #39DC94 0%, #3295D9 100%);
+}
+
+.info-img {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 32%;
+    height: auto;
+}
+.info-text-wrapper {
+    color: #FFF;
+    padding: 46px;
+    padding-right: 0;
+    text-align: left;
+}
+
+.relative {
+    position: relative;
+}
+
 .text-left {
     text-align: left;
 }
@@ -256,6 +278,9 @@ p {
 }
 .no-pd {
     padding: 0 !important;
+}
+.no-overflow {
+    overflow: hidden;
 }
 
 .translucent {
@@ -785,6 +810,11 @@ header h4 {
         padding-top: 150px;
         min-height: 660px;
     }
+
+    .info-text-wrapper {
+        padding: 42px 0;
+        text-align: center;
+    }
     .form-wrapper {
         padding: 30px 40px;
     }
@@ -843,6 +873,11 @@ header h4 {
     .slide {
         padding-top: 80px;
         min-height: 500px;
+    }
+
+    .info-text-wrapper {
+        padding: 42px 0;
+        text-align: center;
     }
 }
 
