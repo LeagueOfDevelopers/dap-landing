@@ -837,6 +837,7 @@ header h4 {
 .screen {
     position: absolute;
     background-color: #FFF;
+    overflow: hidden;
 }
 .iphone .screen {
     top: 12.2%;
