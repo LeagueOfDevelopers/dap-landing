@@ -378,6 +378,16 @@ p {
     box-shadow: none;
 }
 
+.level-1 {
+    transform: translateZ(30px);
+    z-index: 10;
+}
+
+.level-0 {
+    transform: translateZ(-3000px);
+    z-index: 0;
+}
+
 #form-message {
     /* margin: 0 0 8px 0; */
     color: #d54444;
