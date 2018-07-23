@@ -136,7 +136,33 @@ body {
 
 .grad-bg {
     color: #FFF;
+    background-image: linear-gradient(-45deg, #91A5B6 0%, #8ABCBF 100%);
+}
+
+#forum .grad-bg {
     background-image: linear-gradient(-96deg, #49DE9C 0%, #027F7E 100%);
+}
+
+#mipt .grad-bg {
+    background-image: linear-gradient(-100deg, #4E81CC 0%, #292878 100%);
+}
+
+section.gray {
+    background-color: #F9F9F9;
+}
+
+#forum section.secondary {
+    background-color: #E6F8F8;
+}
+
+#mipt section.secondary {
+    background-color: #F0F7FB;
+}
+
+section {
+    position: relative;
+    padding: 76px 0;
+    max-width: 100%;
 }
 
 a {
@@ -478,20 +504,6 @@ p {
     }
 }
 
-section.gray {
-    background-color: #F9F9F9;
-}
-
-section.secondary {
-    background-color: #E6F8F8;
-}
-
-section {
-    position: relative;
-    padding: 76px 0;
-    max-width: 100%;
-}
-
 .simply-text {
     max-width: 650px;
     margin: 0 auto;
@@ -694,7 +706,7 @@ header h4 {
 .info-logo {
     width: 180px;
     float: right;
-    margin: 0 0 0 20px;
+    margin: 0 0 20px 20px;
 }
 
 .hero-logo {
@@ -780,6 +792,16 @@ header h4 {
 .slick-prev
 {
     left: -50%;
+}
+
+.fw-img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0 0 0;
+}
+
+.stats-block {
+    padding: 40px 0 0 0;
 }
 
 .bg-decor {
@@ -888,6 +910,7 @@ header h4 {
     position: absolute;
     left: 0;
     bottom: 0;
+    width: 300px;
 }
 
 #result h2 {
