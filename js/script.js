@@ -59,6 +59,9 @@ function isEmail(email) {
 }
 
 $(document).ready(function () {
+    setTimeout(() => {
+        $("#hero").removeClass("not-loaded");
+    }, 500);
     // $("#submit").сlick( function( event ) {
     //     // event.preventDefault();
     //     console.log( $( "#form" ).serialize() );

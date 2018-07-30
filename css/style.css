@@ -111,11 +111,17 @@ body {
 .remove {
     display: none;
 }
+
 .top-absolute {
     position: absolute;
     top: 0;
-
     width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s ease;
+    min-height: 30%;
 }
 
 .slide {
@@ -148,12 +154,12 @@ a {
     color: inherit;
 }
 
-
 .logo-s {
     display: block;
 
     width: 200px;
     margin: 30px auto;
+    transition: 0.8s ease;
 }
 
 .logo-s-footer {
@@ -161,6 +167,22 @@ a {
 
     width: 200px;
     margin: 20px auto;
+} 
+
+.hero-content {
+    transition: 0.5s ease;
+}
+
+.hero-content.delay-1 {
+    transition-delay: 0.5s;
+}
+
+.hero-content.delay-2 {
+    transition-delay: 0.6s;
+}
+
+.hero-content.delay-3 {
+    transition-delay: 0.7s;
 }
 
 .navigation {
@@ -174,6 +196,8 @@ a {
 
     flex-wrap: wrap;
     justify-content: space-around;
+    transition: 0.5s ease;
+    transition-delay: 0.3s;
 }
 
 .navigation > li {
@@ -189,6 +213,25 @@ a {
 
 .navigation > li:hover {
     text-decoration: underline;
+}
+
+.slide.not-loaded .logo-s {
+    width: 380px;
+    /* margin: 50% auto 10% auto; */
+    margin: 50px auto 10% auto;
+    /* transform: translateY(30%); */
+}
+.slide.not-loaded ul.navigation {
+    opacity: 0;
+}
+
+.slide.not-loaded .hero-content {
+    opacity: 0;
+    transform: translateY(20%);
+}
+
+.slide.not-loaded .top-absolute {
+    min-height: 100%;
 }
 
 h1 {
